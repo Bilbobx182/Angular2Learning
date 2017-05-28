@@ -3,3 +3,13 @@
   <img src = "{{photo}}">
   <figcaption> {{description}} </figcaption>
 </figure>
+
+<div class = "actions">
+  <button type = "button" (click)="isLiked = !isLiked" [ngClass]="{liked : isLiked}">🐶</button>
+</div>
+
+<div class = "comments" ng *ngIf="isLiked">
+  <div class = "comment" *ngFor="let comment of comments">
+    <p><strong>{{comment.name}}</strong>{{comment.comment}}</p>
+  </div>
+</div>
