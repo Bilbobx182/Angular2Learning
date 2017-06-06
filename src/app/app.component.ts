@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Ciaran is cool';
-  activeLetter: string;
 
-  changeLetter() {
-    this.activeLetter = this.title;
-  }
-
+  navbarcontents: any[] = [
+    {name: 'news', detail: ' News'},
+    {name: 'about', detail: ' About and Information'},
+    {name: 'doggo', detail: 'doggo'},
+  ];
 }
